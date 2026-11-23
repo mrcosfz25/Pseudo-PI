@@ -35,5 +35,16 @@ api.post("/edit/:id", async (req, res)=>{
     {$set:{
         nome:req.body.nome, 
         email:req.body.email}})
-    res.redirect("/show")
+         res.redirect("/show")
 })
+ 
+
+ async function iniciar() {
+    await client.connect()
+    const db  = client.db("Infoaula")
+    collection  = db.collection('crud')
+    console.log("banco conectado com sucesso")
+    api.listen(3000, function(){
+        console.log("meu servidor está rodando na porta 3000")
+    })
+ }

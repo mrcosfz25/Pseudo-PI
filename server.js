@@ -1,11 +1,11 @@
 const express = require("express")
 const api = express()
-const {mongoClient, MongoClient} = require("mongodb")
+const {mongoClient} = require("mongodb")
 const dotenv = require("dotenv")
 dotenv.config()
 const url = process.env.DATABASE_URL
 const ObjectId = require("mongodb").ObjectId
-const client = new MongoClient(url)
+const client = new mongoClient(url)
 let collection
 
 api.set("view engine","ejs")
@@ -48,3 +48,6 @@ api.post("/edit/:id", async (req, res)=>{
         console.log("meu servidor está rodando na porta 3000")
     })
  }
+iniciar().catch(function (erro) {
+    console.error("erro ao iniciar a aplicação" + erro)
+})

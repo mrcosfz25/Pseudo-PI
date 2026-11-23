@@ -1,9 +1,29 @@
 {
+  "name": "pseudo-pi",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/mrcosfz25/Pseudo-PI#readme",
+  "bugs": {
+    "url": "https://github.com/mrcosfz25/Pseudo-PI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrcosfz25/Pseudo-PI.git"
+  },
+  "license": "ISC",
+  "author": "joão marcos",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "dependencies": {
     "dotenv": "^18.0.10",
     "ejs": "^7.0.2",
     "express": "^5.3.0",
     "mongodb": "^7.9.0",
     "nodemon": "^3.1.14"
-  }
+  },
+  "devDependencies": {}
 }
